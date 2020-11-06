@@ -26,8 +26,8 @@ elif direction == 2:
     GPIO.output(27, 0)
     GPIO.output(22, 1)
  
-    GPIO.output(16, 0)
-    GPIO.output(20, 1)
+    GPIO.output(16, 1)
+    GPIO.output(20, 0)
 try:
     while True:
         pwm_a.start(dc)
