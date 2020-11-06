@@ -3,7 +3,7 @@ from picamera.array import PiRGBArray
 from picamera import PiCamera
 import cv2
 import numpy as np
-import gpiozero
+# import gpiozero
  
 camera = PiCamera()
 image_width = 640
@@ -16,9 +16,9 @@ center_image_y = image_height / 2
 minimum_area = 250
 maximum_area = 100000
  
-robot = gpiozero.Robot(left=(22,27), right=(17,18))
-forward_speed = 1.0
-turn_speed = 0.8
+# robot = gpiozero.Robot(left=(22,27), right=(17,18))
+# forward_speed = 1.0
+# turn_speed = 0.8
  
 HUE_VAL = 29
  
@@ -28,7 +28,7 @@ upper_color = np.array([HUE_VAL+10, 255, 255])
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
     image = frame.array
 
-    cv2.imshow("image", image)
+    # cv2.imshow("image", image)
 
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
  
@@ -57,22 +57,22 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
     if ball_location:
         if (ball_location[0] > minimum_area) and (ball_location[0] < maximum_area):
             if ball_location[1] > (center_image_x + (image_width/3)):
-                robot.right(turn_speed)
+                # robot.right(turn_speed)
                 print("Turning right")
             elif ball_location[1] < (center_image_x - (image_width/3)):
-                robot.left(turn_speed)
+                # robot.left(turn_speed)
                 print("Turning left")
             else:
-                robot.forward(forward_speed)
+                # robot.forward(forward_speed)
                 print("Forward")
         elif (ball_location[0] < minimum_area):
-            robot.left(turn_speed)
+            # robot.left(turn_speed)
             print("Target isn't large enough, searching")
         else:
-            robot.stop()
+            # robot.stop()
             print("Target large enough, stopping")
     else:
-        robot.left(turn_speed)
+        # robot.left(turn_speed)
         print("Target not found, searching")
 
     rawCapture.truncate(0)

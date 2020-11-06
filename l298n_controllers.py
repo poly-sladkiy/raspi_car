@@ -10,19 +10,19 @@ GPIO.setup(17, GPIO.OUT)  # ENA
 GPIO.setup(27, GPIO.OUT)  # IN 1
 GPIO.setup(22, GPIO.OUT)  # IN 2
  
-direction = input('Please define the direction (Left=1 or Right=2): ')
+direction = input('Please define the direction (Reverse=1 or Forward=2): ')
 dc = input('Please define the Motor PWM Duty Cycle (0-100): ')
 hz = input ('HZ: ')
 pwm_a = GPIO.PWM(17, hz)
 pwm_b = GPIO.PWM(21, hz)
  
-if direction == 1:
+if direction == 1: # Reverse
     GPIO.output(27, 1)
     GPIO.output(22, 0)
 
     GPIO.output(16, 0)
     GPIO.output(20, 1)
-elif direction == 2:
+elif direction == 2: # Forward
     GPIO.output(27, 0)
     GPIO.output(22, 1)
  
