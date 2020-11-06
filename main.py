@@ -7,7 +7,13 @@ car.forward()
 car.drive()
 sleep(3)
 
-car.stop()
+car.right()
+car.drive()
+sleep(3)
+
+car.forward()
+car.drive()
+sleep(3)
 
 car.reverse()
 car.drive()

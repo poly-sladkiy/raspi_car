@@ -20,19 +20,37 @@ class PiCar:
         self.pwm_a = gpio.PWM(17, self.hz)
         self.pwm_b = gpio.PWM(21, self.hz)
 
-    def forward(self) -> None:
+    @staticmethod
+    def forward() -> None:
         gpio.output(27, 0)  # IN 1
         gpio.output(22, 1)  # IN 2
 
         gpio.output(16, 1)  # IN 3
         gpio.output(20, 0)  # IN 4
 
-    def reverse(self) -> None:
-        gpio.output(27, 1)
-        gpio.output(22, 0)
+    @staticmethod
+    def reverse() -> None:
+        gpio.output(27, 1)  # IN 1
+        gpio.output(22, 0)  # IN 2
 
-        gpio.output(16, 0)
-        gpio.output(20, 1)
+        gpio.output(16, 0)  # IN 3
+        gpio.output(20, 1)  # IN 4
+
+    @staticmethod
+    def right() -> None:
+        gpio.output(27, 1)  # IN 1
+        gpio.output(22, 0)  # IN 2
+
+        gpio.output(16, 1)  # IN 3
+        gpio.output(20, 0)  # IN 4
+
+    @staticmethod
+    def left() -> None:
+        gpio.output(27, 0)  # IN 1
+        gpio.output(22, 1)  # IN 2
+
+        gpio.output(16, 0)  # IN 3
+        gpio.output(20, 1)  # IN 4
 
     def drive(self) -> None:
         self.pwm_a.start(self.duty_cycle)
