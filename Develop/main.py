@@ -1,4 +1,4 @@
-from Class_motors import *
+from Develop.Class_motors import *
 from time import sleep
 
 car = PiCar()

@@ -1,5 +1,3 @@
-# Code source (Matt-Timmons Brown): https://github.com/the-raspberry-pi-guy/raspirobots
-# import the necessary packages
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 import time
@@ -7,7 +5,6 @@ import cv2
 import numpy as np
 
 
-# initialize the camera and grab a reference to the raw camera capture
 camera = PiCamera()
 camera.resolution = (640, 480)
 camera.framerate = 32
@@ -34,7 +31,7 @@ while True:
 
         color_mask = cv2.inRange(hsv, lower_red, upper_red)
 
-        result = cv2.bitwise_and(image, image, mask= color_mask)
+        result = cv2.bitwise_and(image, image, mask=color_mask)
 
         cv2.imshow("Camera Output", cv2.resize(image, (320, 240)))
         cv2.imshow("HSV", cv2.resize(hsv, (320, 240)))
