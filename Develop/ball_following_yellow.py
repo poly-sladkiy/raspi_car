@@ -59,23 +59,29 @@ def LocationOfObject():
             if (yellow_object_location[0] > minimum_area) and (yellow_object_location[0] < maximum_area):
 
                 if yellow_object_location[1] > (center_image_x + (image_width/3)):
-                    print("Turning right")
-                    #return "Turning_right"
+                    # print("Turning right")
+                    rawCapture.truncate(0)
+                    return "right"
                 elif yellow_object_location[1] < (center_image_x - (image_width/3)):
-                    print("Turning left")
-                    #return "Turning_left"
+                    # print("Turning left")
+                    rawCapture.truncate(0)
+                    return "left"
                 else:
-                    print("Forward")
-                    #return "Forward"
+                    # print("Forward")
+                    rawCapture.truncate(0)
+                    return "forward"
 
             elif yellow_object_location[0] < minimum_area:
-                print("Target isn't large enough, searching")
-                #return "Target isn't large enough, searching"
+                # print("Target isn't large enough, searching")
+                rawCapture.truncate(0)
+                return "Target isn't large enough, searching"
             else:
-                print("Target large enough, stopping")
-                #return "Target large enough, stopping"
+                # print("Target large enough, stopping")
+                rawCapture.truncate(0)
+                return "Target large enough, stopping"
         else:
-            print("Target not found, searching")
-            #return "Target not found, searching"
+            # print("Target not found, searching")
+            rawCapture.truncate(0)
+            return "Target not found, searching"
 
     rawCapture.truncate(0)

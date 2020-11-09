@@ -1,22 +1,25 @@
-from Develop.Class_motors import *
+from Class_motors import *
+from ball_following_yellow import *
 from time import sleep
 
+
 car = PiCar()
+while True:
+    way = LocationOfObject()
+    print(way)
 
-car.forward()
-car.drive()
-sleep(3)
+    if way == "forward":
+        car.forward()
+        car.drive()
 
-car.right()
-car.drive()
-sleep(3)
+    elif way == "left":
+        car.right()
+        car.drive()
 
-car.forward()
-car.drive()
-sleep(3)
+    elif way == "right":
+        car.left()
+        car.drive()
 
-car.reverse()
-car.drive()
-sleep(3)
+    else:
+        car.stop()
 
-car.clear_all()
