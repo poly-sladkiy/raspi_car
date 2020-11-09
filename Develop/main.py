@@ -13,11 +13,11 @@ while True:
         car.drive()
 
     elif way == "left":
-        car.right()
+        car.left()
         car.drive()
 
     elif way == "right":
-        car.left()
+        car.right()
         car.drive()
 
     else:
