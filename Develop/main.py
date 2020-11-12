@@ -5,6 +5,7 @@ from time import sleep
 
 car = PiCar()
 while True:
+
     way = LocationOfObject()
     print(way)
 
