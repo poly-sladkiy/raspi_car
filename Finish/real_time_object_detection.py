@@ -72,14 +72,6 @@ try:
                 y = startY - 15 if startY - 15 > 15 else startY + 15
                 break
 
-        # show the output frame
-        cv2.imshow("Frame", frame)
-        key = cv2.waitKey(1) & 0xFF
-
-        # if the `q` key was pressed, break from the loop
-        if key == ord("q"):
-            break
-
 finally:
     car.stop()
     car.clear_all()
