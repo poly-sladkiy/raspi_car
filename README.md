@@ -4,13 +4,13 @@
 
 2.	Connect it to a monitor and keyboard. (In our case, we will connect it via HDMI to a laptop)
 
-3.	Now you need to connect to the raspberry pi via ssh:	
-		1.	Connect Ethernet cable   
-		2.	With the help of the IP-scanner we find out IP rasberry pi   
-		3.	Open terminal and using the command: ssh pi@xxx.xxx.xxx.xxx   
-		4.	If the connection failed, then use this program PuTTY https://www.putty.org   
-			![ssh1](./img_in_redme/ssh1.png)   
-		5.	Enter login: pi and password: raspberry   
+3.	Now you need to connect to the raspberry pi via ssh:          	
+	1.	Connect Ethernet cable   
+	2.	With the help of the IP-scanner we find out IP rasberry pi     
+	3.	Open terminal and using the command: ssh pi@xxx.xxx.xxx.xxx     
+	4.	If the connection failed, then use this program PuTTY https://www.putty.org   
+		![ssh1](./img_in_redme/ssh1.png)   
+	5.	Enter login: pi and password: raspberry   
 	
 4.	Enter the following commands:
 	```console
@@ -41,3 +41,9 @@
 	  pi@raspberrypi:~$ cd ./raspi_car/Finish
 	  pi@raspberrypi:~/raspi_car/Finish $ python3 real_time_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel -u MOVIDIUS
 	  ```
+## Authors GitHub ##
+
+-	polySladkiy
+-	younextx13
+-	thbeca-30
+
