@@ -7,7 +7,7 @@
 3.	Now you need to connect to the raspberry pi via ssh:	
 		1.	Connect Ethernet cable   
 		2.	With the help of the IP-scanner we find out IP rasberry pi   
-		3.	Using the command: ssh pi@xxx.xxx.xxx.xxx   
+		3.	Open terminal and using the command: ssh pi@xxx.xxx.xxx.xxx   
 		4.	If the connection failed, then use this program PuTTY https://www.putty.org   
 			![ssh1](./img_in_redme/ssh1.png)   
 		5.	Enter login: pi and password: raspberry   
@@ -32,6 +32,7 @@
 	```
 	
 8.	Run VNC Viewer and enter the IP you received in 3)  xxx.xxx.xxx.xxx:1
+	Enter password: 1234567890
 	
 9.	Once connected, open a terminal in the graphical interface and enter the following:
 	
