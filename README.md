@@ -31,7 +31,7 @@
 	pi@raspberrypi:~$ vncserver
 	```
 	
-8.	Run VNC Viewer and enter the IP you received in 3)  xxx.xxx.xxx.xxx:1
+8.	Run VNC Viewer and enter the IP you received in 3): xxx.xxx.xxx.xxx:1   
 	Enter password: 1234567890
 	
 9.	Once connected, open a terminal in the graphical interface and enter the following:
