@@ -41,6 +41,7 @@
 	  pi@raspberrypi:~$ cd ./raspi_car/Finish
 	  pi@raspberrypi:~/raspi_car/Finish $ python3 real_time_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel -u MOVIDIUS
 	  ```
+![test](./img_in_redme/test.gif)
 ## Authors GitHub ##
 
 -	polySladkiy
