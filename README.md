@@ -44,7 +44,7 @@
 ![test](./img_in_redme/test.gif)
 ## Authors GitHub ##
 
--	polySladkiy
--	younextx13
--	thbeca-30
+-	[polySladkiy](https://github.com/polySladkiy)
+-	[younextx13](https://github.com/younextx13)
+-	[thbeca-30](https://github.com/thbeca-30)
 
